@@ -1,1 +1,1 @@
-export const last = (arr) => arr.slice(-1)
+export const last = (list) => list[list.length - 1]

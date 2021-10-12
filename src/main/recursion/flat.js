@@ -1,6 +1,6 @@
-export const flat = (arr) =>
-  arr.reduce(
-    (acc, current) =>
-      acc.concat(Array.isArray(current) ? flat(current) : [current]),
+export const flat = (list) =>
+  list.reduce(
+    (list, current) =>
+      list.concat(Array.isArray(current) ? flat(current) : [current]),
     []
   )

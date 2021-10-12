@@ -1,1 +1,1 @@
-export const head = (arr) => arr.slice(0, 1)
+export const head = (list) => list[0]

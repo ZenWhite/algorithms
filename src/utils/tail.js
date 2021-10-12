@@ -1,1 +1,1 @@
-export const tail = (arr) => arr.slice(1)
+export const tail = (list) => list.slice(1)
