@@ -29,4 +29,4 @@ const reduceRes = reduce(
   {}
 )
 
-console.log(reduceRes)
+console.log(flatRes)
