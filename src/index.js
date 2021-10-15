@@ -9,6 +9,7 @@ import { flat } from './main/recursion/flat'
 import { map } from './main/recursion/map'
 import { qsort } from './main/recursion/qsort'
 import { reduce } from 'main/recursion/reduce'
+import { filter } from 'main/recursion/filter'
 
 const binRes = bin(range(10, 3), 12)
 const sortRes = selectionSort([5, 3, 6, 2, 10, -1, 12])
@@ -24,9 +25,10 @@ const flatRes = flat([
 const mapRes = map((n) => n ** 2, [1, 2, 3, 4, 5, 6, 7, 8, 9])
 const qsortRes = qsort([2, 1, -55, 44, 33, 101, 523, 14])
 const reduceRes = reduce(
-  (acc, item, list) => ({ ...acc, [item]: list.indexOf(item) }),
+  (acc, item) => ({ ...acc, [item]: 'some value' }),
   ['a', 'b', 'c'],
   {}
 )
+const filterRes = filter((item) => item % 2 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
 
-console.log(flatRes)
+console.log(filterRes)
