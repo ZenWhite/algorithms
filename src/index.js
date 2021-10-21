@@ -2,14 +2,16 @@ import { range } from './utils/range'
 
 import { bin } from './main/bin'
 import { selectionSort } from './main/sort'
+
 import { sum } from './main/recursion/sum'
 import { count } from './main/recursion/count'
 import { max } from './main/recursion/max'
 import { flat } from './main/recursion/flat'
 import { map } from './main/recursion/map'
 import { qsort } from './main/recursion/qsort'
-import { reduce } from 'main/recursion/reduce'
-import { filter } from 'main/recursion/filter'
+import { reduce } from './main/recursion/reduce'
+import { filter } from './main/recursion/filter'
+import { compose } from './main/recursion/compose'
 
 const binRes = bin(range(10, 3), 12)
 const sortRes = selectionSort([5, 3, 6, 2, 10, -1, 12])
@@ -30,5 +32,6 @@ const reduceRes = reduce(
   {}
 )
 const filterRes = filter((item) => item % 2 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+const composeRes = compose(2, [(n) => n * 2, (n) => n ** 2])
 
-console.log(filterRes)
+console.log(composeRes)
