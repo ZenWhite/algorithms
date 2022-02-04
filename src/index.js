@@ -12,6 +12,7 @@ import { qsort } from './main/recursion/qsort'
 import { reduce } from './main/recursion/reduce'
 import { filter } from './main/recursion/filter'
 import { compose } from './main/recursion/compose'
+import { prop } from './main/recursion/prop'
 
 const binRes = bin(range(10, 3), 12)
 const sortRes = selectionSort([5, 3, 6, 2, 10, -1, 12])
@@ -37,4 +38,31 @@ const composeRes = compose(
   (n) => n ** 3
 )(2)
 
-console.log(composeRes)
+const user = {
+  name: 'Andrew',
+  age: 17,
+  parents: {
+    mother: {
+      name: 'Luiza',
+      age: 45,
+      parents: {
+        mother: {
+          name: 'Alise',
+          age: 75
+        },
+        father: {
+          name: 'Alex',
+          age: 80
+        }
+      }
+    },
+    father: {
+      name: 'Max',
+      age: 47
+    }
+  }
+}
+
+const result = prop(user, 'name')
+
+console.log(result)
